@@ -1,5 +1,5 @@
 class Student {
-  fullName: string;
+  public fullName: string;
 
   constructor(
     public firstName: string,
@@ -10,15 +10,13 @@ class Student {
   }
 }
 
-interface Person {
+interface IPerson {
   firstName: string;
   lastName: string;
 }
 
-function greeter(person: Person) {
+function greeter(person: IPerson): string {
   return `Hello, ${person.firstName} ${person.lastName}`;
 }
 
 const user = new Student('Jane', 'M.', 'User');
-
-document.body.innerHTML = greeter(user);
