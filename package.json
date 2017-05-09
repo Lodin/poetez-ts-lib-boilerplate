@@ -6,7 +6,7 @@
   "main": "es/index.js",
   "scripts": {
     "clean": "rimraf commonjs es umd coverage",
-    "lint": "tslint src/**/*.ts --type-check",
+    "lint": "tslint src/**/*.ts --type-check -p tsconfig.json -t verbose",
     "check-es3": "check-es3-syntax lib/ build/ --kill --print",
     "test": "nyc ./node_modules/.bin/_mocha",
     "build:commonjs": "tsc --outDir commonjs --target es3 -m commonjs --mapRoot ../commonjs",
@@ -50,7 +50,7 @@
     "sinon": "^2.2.0",
     "ts-node": "^3.0.4",
     "tslint": "^5.2.0",
-    "tslint-config-airbnb": "^1.1.1",
+    "tslint-config-poetez": "https://github.com/poetez/tslint-config-poetez",
     "typescript": "^2.3.2",
     "webpack": "^2.5.1"
   },
