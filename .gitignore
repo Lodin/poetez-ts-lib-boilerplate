@@ -1,12 +1,10 @@
 # See https://help.github.com/ignore-files/ for more about ignoring files.
 
-# IDE
-.idea
-
 # dependencies
 /node_modules
 
 # testing
+/.nyc_output
 /coverage
 
 # production
