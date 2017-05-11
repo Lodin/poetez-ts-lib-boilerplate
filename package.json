@@ -9,7 +9,7 @@
     "lint": "tslint src/**/*.ts --type-check -p tsconfig.json -t verbose",
     "check-es3": "check-es3-syntax lib/ build/ --kill --print",
     "test": "nyc ./node_modules/.bin/_mocha",
-    "build:commonjs": "tsc --outDir commonjs --target es3 -m commonjs --mapRoot ../commonjs",
+    "build:commonjs": "tsc --outDir commonjs -m commonjs --mapRoot ../commonjs",
     "build:es": "tsc --outDir es --target es2015 -m es2015 --mapRoot ../es",
     "build:umd": "cross-env NODE_ENV=development webpack --config=config/webpack.dev.js",
     "build:umd:min": "cross-env NODE_ENV=production webpack --config=config/webpack.prod.js",
