@@ -3,6 +3,9 @@
   "env": {
     "node": true
   },
+  "globals": {
+    "jasmine": false
+  },
   "rules": {
     "comma-dangle": ["error", {
       "arrays": "always-multiline",

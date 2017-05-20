@@ -10,7 +10,7 @@
     ".ts"
   ],
   "require": [
-    "./config/parser"
+    "./config/test/parser"
   ],
   "reporter": [
     "html",

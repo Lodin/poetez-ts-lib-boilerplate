@@ -1,4 +1,4 @@
-class Student {
+export class Student {
   public fullName: string;
 
   constructor(
@@ -10,13 +10,11 @@ class Student {
   }
 }
 
-interface IPerson {
+export interface IPerson {
   firstName: string;
   lastName: string;
 }
 
-function greeter(person: IPerson): string {
+export function greeter(person: IPerson): string {
   return `Hello, ${person.firstName} ${person.lastName}`;
 }
-
-const user = new Student('Jane', 'M.', 'User');

@@ -1,4 +1,0 @@
---compilers ts:config/parser
---full-trace
---bail
-spec/**/*.spec.ts
