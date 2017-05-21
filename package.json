@@ -17,8 +17,8 @@
     "build:es": "yarn run build:es:files && yarn run build:es:copydts",
     "build:es:files": "tsc --outDir es --target es2015 -m es2015 --mapRoot ../es",
     "build:es:copydts": "cd src && copyfiles **/*.d.ts ../es",
-    "build:umd": "cross-env NODE_ENV=development webpack --config=config/webpack.dev.js --mapRoot ../umd",
-    "build:umd:min": "cross-env NODE_ENV=production webpack --config=config/webpack.prod.js --mapRoot ../umd",
+    "build:umd": "cross-env NODE_ENV=development webpack --config=config/webpack.dev.js",
+    "build:umd:min": "cross-env NODE_ENV=production webpack --config=config/webpack.prod.js",
     "build": "yarn run build:commonjs && yarn run build:es && yarn run build:umd && yarn run build:umd:min",
     "_prepublish": "yarn run clean && yarn run lint && yarn test && yarn run build && yarn run check-es3",
     "precommit": "lint-staged"

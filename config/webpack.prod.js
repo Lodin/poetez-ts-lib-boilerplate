@@ -15,6 +15,7 @@ module.exports = Object.assign({}, config, {
         loader: 'awesome-typescript-loader',
         options: {
           configFileName: paths.tsconfig,
+          mapRoot: '../umd',
           forkChecker: true,
           transpileOnly: true,
         },
