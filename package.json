@@ -7,8 +7,8 @@
   "scripts": {
     "clean": "rimraf commonjs es umd coverage",
     "lint": "npm-run-all --parallel lint:*",
-    "lint:src": "tslint src/**/*.ts --type-check -c tslint.json -p tsconfig.json -t verbose",
-    "lint:spec": "tslint spec/**/*.ts --type-check -c tslint.json -p tsconfig.json -t verbose",
+    "lint:src": "tslint src/**/*.ts --type-check -c tslint.json -p tsconfig.tslint.json -t verbose",
+    "lint:spec": "tslint spec/**/*.ts --type-check -c tslint.json -p tsconfig.tslint.json -t verbose",
     "check-es3": "check-es3-syntax umd/ --patch && apply-patch poetez-ts-lib-boilerplatre.js.patch && rimraf poetez-ts-lib-boilerplatre.js.patch",
     "test": "nodemon --watch src --watch spec -e ts --exec \"yarn run test:single\"",
     "test:single": "jasmine --config=jasmine.json",
