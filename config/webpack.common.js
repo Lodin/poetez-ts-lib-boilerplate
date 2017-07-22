@@ -12,7 +12,7 @@ module.exports = {
     extensions: ['.js', '.json', '.ts', '.tsx'],
   },
   output: {
-    library: 'Lazyx',
+    library: 'poetezTsLib',
     libraryTarget: 'umd',
   },
   plugins: [

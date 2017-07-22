@@ -3,7 +3,7 @@ const paths = require('./paths');
 
 module.exports = Object.assign({}, config, {
   output: Object.assign({}, config.output, {
-    filename: 'lazyx.js',
+    filename: 'poetez-ts-lib.js',
     path: paths.build,
   }),
   module: {
@@ -16,9 +16,8 @@ module.exports = Object.assign({}, config, {
           cacheDirectory: paths.cache,
           configFileName: paths.tsconfig,
           mapRoot: '../umd',
-          target: "es3",
+          target: 'es3',
           forkChecker: true,
-          transpileOnly: true,
         },
       },
     ],
