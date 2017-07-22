@@ -15,7 +15,7 @@ module.exports = Object.assign({}, config, {
         options: {
           cacheDirectory: paths.cache,
           configFileName: paths.tsconfig,
-          mapRoot: '../umd',
+          mapRoot: '../dist/umd',
           target: 'es3',
           forkChecker: true,
         },
