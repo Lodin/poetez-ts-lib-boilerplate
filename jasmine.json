@@ -4,6 +4,7 @@
     "**/*.spec.+(ts|tsx)"
   ],
   "helpers": [
+    "ignore-styles",
     "../config/test/reporters.js",
     "../config/test/parser.js"
   ]
