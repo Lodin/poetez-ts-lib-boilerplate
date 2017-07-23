@@ -23,7 +23,9 @@
     "build:umd:min": "cross-env NODE_ENV=production webpack --config=config/webpack.prod.js",
     "build": "npm-run-all --parallel build:cjs build:umd",
     "_prepublish": "npm-run-all clean lint test:single build",
-    "precommit": "lint-staged"
+    "precommit": "lint-staged",
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook"
   },
   "repository": {
     "type": "git",
@@ -41,12 +43,15 @@
   },
   "homepage": "https://github.com/poetez/poetez-ts-lib-boilerplate#readme",
   "devDependencies": {
+    "@storybook/react": "^3.1.9",
     "@types/enzyme": "^2.8.3",
     "@types/jasmine": "^2.5.53",
     "@types/node": "^8.0.14",
     "@types/prop-types": "^15.5.1",
     "@types/react": "^15.0.38",
     "@types/react-dom": "^15.5.1",
+    "@types/storybook__addon-actions": "^3.0.1",
+    "@types/storybook__react": "^3.0.2",
     "apply-patch": "^0.1.2",
     "awesome-typescript-loader": "^3.2.1",
     "check-es3-syntax-cli": "^0.2.0",
@@ -68,6 +73,7 @@
     "nyc": "^11.0.3",
     "react-test-renderer": "^15.6.1",
     "rimraf": "^2.6.1",
+    "ts-loader": "^2.3.1",
     "ts-node": "^3.2.1",
     "tslint": "^5.5.0",
     "tslint-config-poetez": "0.2.0",
