@@ -8,8 +8,11 @@
 // to "React Create App". This only has babel loader to load JavaScript.
 
 const genDefaultConfig = require('@storybook/react/dist/server/config/defaults/webpack.config.js');
+const getLocalIdent = require('./helpers').getLocalIdent;
 
-const postcssPattern = /postcss/;
+const postcssPattern = /postcss-loader/;
+const allCssPattern = /css/;
+const cssPattern = /css-loader/;
 
 module.exports = (baseConfig, env) => {
   const config = genDefaultConfig(baseConfig, env);
@@ -20,8 +23,19 @@ module.exports = (baseConfig, env) => {
   });
   config.resolve.extensions.push('.ts', '.tsx');
 
-  const postcssLoader = config.module.rules.find(rule => postcssPattern.test(rule.loader));
+  const allCssLoader = config.module.rules.find(rule => allCssPattern.test(rule.test.toString()));
+  const cssLoader = allCssLoader.use.find(rule => cssPattern.test(rule.loader));
+  const postcssLoader = allCssLoader.use.find(rule => postcssPattern.test(rule.loader));
+
   postcssLoader.options.plugins = require('../config/postcss.config');
+
+  cssLoader.options = {
+    importLoaders: 1,
+    modules: true,
+    camelCase: true,
+    localIdentName: '[name]__[local]',
+    getLocalIdent,
+  };
 
   return config;
 };

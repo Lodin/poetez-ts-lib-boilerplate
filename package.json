@@ -71,6 +71,7 @@
     "jasmine-spec-reporter": "^4.1.1",
     "jsdom": "^11.1.0",
     "jsdom-global": "^3.0.2",
+    "kebab-case": "^1.0.0",
     "lint-staged": "^4.0.2",
     "nodemon": "^1.11.0",
     "npm-run-all": "^4.0.2",

@@ -3,9 +3,11 @@ import * as React from 'react';
 import {action} from '@storybook/addon-actions';
 import {storiesOf} from '@storybook/react';
 
+import Example from '../src/Example';
+
 storiesOf('<img />', module)
   .add('with a image', () => (
-    <img src="https://i.ytimg.com/vi/Bor5lkRyeGo/hqdefault.jpg" alt="covfefe" />
+    <Example/>
   ));
 
 storiesOf('Button', module)
