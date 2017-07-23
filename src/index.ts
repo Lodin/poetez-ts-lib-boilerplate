@@ -1,3 +1,5 @@
+import './example';
+
 export class Student {
   public fullName: string;
 
