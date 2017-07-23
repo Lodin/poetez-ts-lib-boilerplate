@@ -7,8 +7,9 @@
 // When you add this file, we won't add the default configurations which is similar
 // to "React Create App". This only has babel loader to load JavaScript.
 
-const path = require('path');
 const genDefaultConfig = require('@storybook/react/dist/server/config/defaults/webpack.config.js');
+
+const postcssPattern = /postcss/;
 
 module.exports = (baseConfig, env) => {
   const config = genDefaultConfig(baseConfig, env);
@@ -18,6 +19,9 @@ module.exports = (baseConfig, env) => {
     loader: require.resolve('ts-loader')
   });
   config.resolve.extensions.push('.ts', '.tsx');
+
+  const postcssLoader = config.module.rules.find(rule => postcssPattern.test(rule.loader));
+  postcssLoader.options.plugins = require('../config/postcss.config');
 
   return config;
 };
