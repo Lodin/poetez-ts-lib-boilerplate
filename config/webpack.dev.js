@@ -3,7 +3,7 @@ const paths = require('./paths');
 
 module.exports = Object.assign({}, config, {
   output: Object.assign({}, config.output, {
-    filename: 'poetez-ts-lib.js',
+    filename: 'poetez-ts-react-lib.js',
     path: paths.build,
   }),
   module: {
