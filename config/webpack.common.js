@@ -12,7 +12,7 @@ module.exports = {
     extensions: ['.js', '.json', '.ts', '.tsx'],
   },
   output: {
-    library: 'poetezTsLib',
+    library: 'poetezTsReactComponentLib',
     libraryTarget: 'umd',
   },
   plugins: [
