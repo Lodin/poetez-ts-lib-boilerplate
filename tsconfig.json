@@ -3,6 +3,7 @@
     "baseUrl": "./",
     "downlevelIteration": true,
     "importHelpers": true,
+    "jsx": "React",
     "lib": [
       "dom",
       "es2017"
@@ -22,7 +23,7 @@
     ]
   },
   "include": [
-    "src/**/*.ts"
+    "src/**/*"
   ],
   "exclude": [
     "node_modules"
