@@ -1,5 +1,5 @@
 {
-  "src/**/*.ts": ["yarn run lint:src -- --fix", "git add"],
-  "spec/**/*.ts": ["yarn run lint:spec -- --fix", "git add"],
+  "src/**/*.ts": ["npm-run-all lint:src -- --fix", "git add"],
+  "spec/**/*.ts": ["npm-run-all lint:spec -- --fix", "git add"],
   "config/**/*.js": ["eslint --fix", "git add"]
 }
