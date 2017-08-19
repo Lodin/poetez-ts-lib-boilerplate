@@ -1,8 +1,8 @@
 {
-  "name": "poetez-ts-react-component-lib-boilerplatre",
+  "name": "poetez-ts-wc-lib-boilerplatre",
   "private": true,
   "version": "0.1.0",
-  "description": "Typescript React component library boilerplate for Poetez Project",
+  "description": "Typescript Web Component library boilerplate for Poetez Project",
   "scripts": {
     "clean": "rimraf dist coverage",
     "check-es3": "check-es3-syntax dist/umd/ --patch && apply-patch poetez-ts-lib-boilerplatre.js.patch && rimraf poetez-ts-lib-boilerplatre.js.patch",
