@@ -6,7 +6,11 @@ module.exports = () => [
   }),
   require('postcss-discard-comments')(),
   require('postcss-mixins')(),
-  require('postcss-cssnext')(),
+  require('postcss-cssnext')({
+    features: {
+      customProperties: false,
+    },
+  }),
   require('postcss-extend')(),
   require('postcss-calc'),
   require('postcss-functions'),
