@@ -38,7 +38,7 @@ module.exports = (baseConfig, env) => {
         {
           loader: 'postcss-loader',
           options: {
-            plugins: require('../config/postcss.config'),
+            plugins: require(paths.postcssConfig),
           }
         }
       ]
