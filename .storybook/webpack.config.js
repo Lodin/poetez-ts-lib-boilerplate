@@ -10,12 +10,12 @@
 const genDefaultConfig = require('@storybook/react/dist/server/config/defaults/webpack.config.js');
 const paths = require('../config/paths');
 
-const allCssPattern = /css/;
+const cssPattern = /css/;
 
 module.exports = (baseConfig, env) => {
   const config = genDefaultConfig(baseConfig, env);
 
-  config.module.rules.filter(rule => allCssPattern.test(rule.test.toString()));
+  config.module.rules = config.module.rules.filter(rule => !cssPattern.test(rule.test.toString()));
 
   config.module.rules.push(
     {
@@ -29,12 +29,20 @@ module.exports = (baseConfig, env) => {
     },
     {
       test: /\.html/,
-      loader: 'raw-loader',
+      loader: 'html-loader',
+      options: {
+        minimize: true,
+      }
     },
     {
       test: /\.css/,
       use: [
-        {loader: 'raw-loader'},
+        {
+          loader: 'css-loader',
+          options: {
+            importModules: 1,
+          }
+        },
         {
           loader: 'postcss-loader',
           options: {
