@@ -6,20 +6,4 @@ module.exports = Object.assign({}, config, {
     filename: 'poetez-ts-lib.js',
     path: paths.build,
   }),
-  module: {
-    rules: [
-      {
-        test: /\.ts$/,
-        include: paths.src,
-        loader: 'awesome-typescript-loader',
-        options: {
-          cacheDirectory: paths.cache,
-          configFileName: paths.tsconfig,
-          mapRoot: '../dist/umd',
-          target: 'es3',
-          forkChecker: true,
-        },
-      },
-    ],
-  },
 });

@@ -7,21 +7,6 @@ module.exports = Object.assign({}, config, {
     filename: 'poetez-ts-lib.min.js',
     path: paths.build,
   }),
-  module: {
-    rules: [
-      {
-        test: /\.ts$/,
-        include: paths.src,
-        loader: 'awesome-typescript-loader',
-        options: {
-          configFileName: paths.tsconfig,
-          mapRoot: '../dist/umd',
-          target: 'es3',
-          forkChecker: true,
-        },
-      },
-    ],
-  },
   plugins: [
     ...config.plugins,
     new webpack.optimize.UglifyJsPlugin({
