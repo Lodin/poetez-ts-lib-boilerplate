@@ -10,7 +10,6 @@
 /.lintstagedrc
 /.nycrc
 /.travis.yml
-/jasmine.json
 /tsconfig.json
 /tslint.json
 
