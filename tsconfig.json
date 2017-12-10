@@ -1,13 +1,11 @@
 {
   "compilerOptions": {
     "baseUrl": "./",
-    "downlevelIteration": true,
-    "importHelpers": true,
     "lib": [
       "dom",
       "es2017"
     ],
-    "module": "es2015",
+    "module": "esnext",
     "moduleResolution": "node",
     "noFallthroughCasesInSwitch": true,
     "noImplicitReturns": true,
@@ -16,7 +14,7 @@
     "sourceMap": true,
     "sourceRoot": "./src",
     "strict": true,
-    "target": "es2015",
+    "target": "es2017",
     "typeRoots": [
       "node_modules/@types"
     ]

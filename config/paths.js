@@ -3,7 +3,10 @@ const path = require('path');
 const resolve = relativePath => path.resolve(__dirname, '..', relativePath);
 
 module.exports = {
-  build: resolve('./dist/umd'),
+  build: {
+    cjs: resolve('./dist/cjs'),
+    es: resolve('./dist/es'),
+  },
   cache: resolve('./node_modules/.cache'),
   index: resolve('./src/index.ts'),
   modules: resolve('./node_modules'),

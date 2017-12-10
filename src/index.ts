@@ -1,5 +1,8 @@
+import {sum} from './test/sum';
+
 export class Student {
   public fullName: string;
+  public sum = sum;
 
   constructor(
     public firstName: string,

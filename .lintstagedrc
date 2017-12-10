@@ -1,5 +1,5 @@
 {
-  "src/**/*.ts": ["npm-run-all lint:src -- --fix", "git add"],
-  "spec/**/*.ts": ["npm-run-all lint:spec -- --fix", "git add"],
-  "config/**/*.js": ["eslint --fix", "git add"]
+  "src/**/*.ts": ["npm run lint:src", "git add"],
+  "config/**/*.js": ["npm run lint:config", "git add"],
+  "scripts/**/*.js": ["npm run lint:scripts", "git add"]
 }
