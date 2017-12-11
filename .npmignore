@@ -8,15 +8,13 @@
 /.editorconfig
 /.gitignore
 /.lintstagedrc
-/.nycrc
 /.travis.yml
-/jasmine.json
 /tsconfig.json
+/tsconfig.test.json
 /tslint.json
 
 # testing
 /spec
-/.nyc_output
 /coverage
 
 # misc

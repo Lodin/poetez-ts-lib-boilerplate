@@ -1,6 +1,4 @@
-// tslint:disable:export-name
-
 declare module '*.css' {
-  const content: any;
-  export default content;
+  const content: {[key: string]: string};
+  export = content;
 }
